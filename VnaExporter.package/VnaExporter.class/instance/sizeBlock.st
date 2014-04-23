@@ -1,0 +1,3 @@
+properties
+sizeBlock
+	^ sizeBlock

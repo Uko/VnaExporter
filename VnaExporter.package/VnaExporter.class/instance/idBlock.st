@@ -1,0 +1,3 @@
+properties
+idBlock
+	^ idBlock

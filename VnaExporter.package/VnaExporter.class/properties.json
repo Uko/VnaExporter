@@ -1,0 +1,24 @@
+{
+	"category" : "VnaExporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "YuriyTymchuk 4/22/2014 18:22",
+	"instvars" : [
+		"colorBlock",
+		"connections",
+		"idBlock",
+		"model",
+		"nodeData",
+		"shapeBlock",
+		"shortlabelBlock",
+		"sizeBlock",
+		"tieData",
+		"xBlock",
+		"yBlock" ],
+	"name" : "VnaExporter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
