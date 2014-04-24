@@ -11,10 +11,10 @@ printNodePropertiesOn: aStream
 	props := props collect: [ :prop | prop , 'Block' ].
 	
 	model do: [ :item |
-		aStream nextPutAll: (idBlock value: item); tab.
-		(props collect: [ :prop |
-			(self instVarNamed: prop) value: item ])
-				printOn: aStream
-				delimiter: String tab.
+		aStream nextPutAll: (idBlock value: item).
+		(props do: [ :prop |
+			aStream
+				tab;
+				nextPutAll: ((self instVarNamed: prop) value: item) asString ]).
 		aStream cr ].
 	aStream cr.

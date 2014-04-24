@@ -13,7 +13,7 @@ testPrintNodePropertiesOn
 '*node properties
 ID	x	y
 1	0.5	2
-2	1	4
+2	1.0	4
 3	1.5	6
 
 '
