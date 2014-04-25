@@ -3,6 +3,6 @@ initialize
 
 	model := OrderedCollection new.
 	connections := OrderedCollection new.
-	idBlock := #asString.
+	idBlock := #yourself.
 	nodeData := IdentityDictionary new.
 	tieData := IdentityDictionary new.

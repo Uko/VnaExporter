@@ -11,10 +11,9 @@ printNodePropertiesOn: aStream
 	props := props collect: [ :prop | prop , 'Block' ].
 	
 	model do: [ :item |
-		aStream nextPutAll: (idBlock value: item) asString.
+		(idBlock value: item) printVnaOn: aStream.
 		props do: [ :prop |
-			aStream
-				tab;
-				nextPutAll: ((self instVarNamed: prop) value: item) asString ].
+			aStream tab.
+			((self instVarNamed: prop) value: item) printVnaOn: aStream ].
 		aStream cr ].
 	aStream cr.

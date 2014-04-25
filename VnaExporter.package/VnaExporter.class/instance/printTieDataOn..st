@@ -9,11 +9,10 @@ printTieDataOn: aStream
 	props do: [ :prop | aStream nextPutAll: prop ] separatedBy: [ aStream tab ].
 	aStream cr.
 	connections do: [ :tie |
-		aStream
-			nextPutAll: (idBlock value: tie key); tab;
-			nextPutAll: (idBlock value: tie value); tab.
-		(props collect: [ :prop |
-			(tieData at: prop) value: tie key value: tie value ])
-				printOn: aStream
-				delimiter: String tab.
-		aStream cr ]
+		(idBlock value: tie key) printVnaOn: aStream.
+		aStream tab.
+		(idBlock value: tie value) printVnaOn: aStream..
+		props do: [ :prop |
+			aStream tab.
+			((tieData at: prop) value: tie key value: tie value) printVnaOn: aStream.
+		aStream cr ] ]
