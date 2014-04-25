@@ -12,9 +12,9 @@ printNodePropertiesOn: aStream
 	
 	model do: [ :item |
 		aStream nextPutAll: (idBlock value: item) asString.
-		(props do: [ :prop |
+		props do: [ :prop |
 			aStream
 				tab;
-				nextPutAll: ((self instVarNamed: prop) value: item) asString ]).
+				nextPutAll: ((self instVarNamed: prop) value: item) asString ].
 		aStream cr ].
 	aStream cr.
