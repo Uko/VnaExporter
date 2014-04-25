@@ -11,7 +11,7 @@ printNodePropertiesOn: aStream
 	props := props collect: [ :prop | prop , 'Block' ].
 	
 	model do: [ :item |
-		aStream nextPutAll: (idBlock value: item).
+		aStream nextPutAll: (idBlock value: item) asString.
 		(props do: [ :prop |
 			aStream
 				tab;
