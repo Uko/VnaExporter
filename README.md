@@ -3,6 +3,19 @@ VnaExporter for Pharo
 
 Short description about VNA format can be found on [Gephi website](https://gephi.org/users/supported-graph-formats/netdraw-vna-format/).
 
+Installation
+------------
+
+VnaExporter is available in Pharo 3 configuration browser.
+
+You can also load it executing is a workspace:
+
+    Gofer it
+      smalltalkhubUser: 'Pharo'
+      project: 'MetaRepoForPharo30';
+      configurationOf: 'VnaExporter';
+      loadStable.
+
 How to use
 ----------
 
