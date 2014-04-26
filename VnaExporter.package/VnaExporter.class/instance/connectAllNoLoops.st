@@ -1,7 +1,7 @@
 connections
 connectAllNoLoops
 	
-	^ connections := model flatCollect: [ :from |
+	^ edges := model flatCollect: [ :from |
 		model
 			reject: [ :to | to == from ]
 			thenCollect: [ :to |

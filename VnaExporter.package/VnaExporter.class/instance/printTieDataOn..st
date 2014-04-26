@@ -8,7 +8,7 @@ printTieDataOn: aStream
 		nextPutAll: 'to'; tab.
 	props do: [ :prop | aStream nextPutAll: prop ] separatedBy: [ aStream tab ].
 	aStream cr.
-	connections do: [ :tie |
+	edges do: [ :tie |
 		(idBlock value: tie key) printVnaOn: aStream.
 		aStream tab.
 		(idBlock value: tie value) printVnaOn: aStream..

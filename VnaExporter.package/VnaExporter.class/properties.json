@@ -7,7 +7,7 @@
 	"commentStamp" : "YuriyTymchuk 4/22/2014 18:22",
 	"instvars" : [
 		"colorBlock",
-		"connections",
+		"edges",
 		"idBlock",
 		"model",
 		"nodeData",

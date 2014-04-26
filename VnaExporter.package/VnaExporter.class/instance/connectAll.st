@@ -1,6 +1,6 @@
 connections
 connectAll
 	
-	^ connections := model flatCollect: [ :from |
+	^ edges := model flatCollect: [ :from |
 		model collect: [ :to |
 			from -> to ] ]
