@@ -1,4 +1,4 @@
-connections
+connecting
 connectAll
 	
 	^ edges := model flatCollect: [ :from |

@@ -1,4 +1,4 @@
-connections
+connecting
 connectAllUndirectedNoLoops
 	
 	edges := OrderedCollection new.

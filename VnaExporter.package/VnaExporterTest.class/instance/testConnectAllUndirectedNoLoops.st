@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testConnectAllUndirectedNoLoops 
 	exporter model: #(1 2 3 4).
 	

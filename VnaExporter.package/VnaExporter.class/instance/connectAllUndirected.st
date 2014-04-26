@@ -1,4 +1,4 @@
-connections
+connecting
 connectAllUndirected
 	
 	edges := OrderedCollection new.

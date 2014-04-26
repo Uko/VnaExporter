@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testConnectAll
 	exporter model: #(1 2 3).
 	

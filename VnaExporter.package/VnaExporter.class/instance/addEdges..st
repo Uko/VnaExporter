@@ -1,3 +1,3 @@
-as yet unclassified
+adding
 addEdges: aCollectionOfPairs
 	edges addAll: aCollectionOfPairs
