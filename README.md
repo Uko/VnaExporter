@@ -1,4 +1,4 @@
-VnaExporter for Pharo
+VnaExporter for Pharo [![Build Status](https://travis-ci.org/Uko/VnaExporter.svg?branch=master)](https://travis-ci.org/Uko/VnaExporter)
 =====================
 
 Short description about VNA format can be found on [Gephi website](https://gephi.org/users/supported-graph-formats/netdraw-vna-format/).

@@ -1,0 +1,21 @@
+language: pharo
+
+env:
+  global:
+    - PROJECT=VnaExporter
+    - REPO=http://www.smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main
+    - PHARO=30
+  matrix:
+    - VERSION=stable
+    - VERSION=development
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install libc6:i386 libssl1.0.0:i386
+  - wget --quiet -O - get.pharo.org/$PHARO+vm | bash
+
+install:
+  - ./pharo Pharo.image config $REPO ConfigurationOf$PROJECT --install=$VERSION
+
+script:
+  - ./pharo Pharo.image test "$PROJECT.*"
