@@ -18,5 +18,5 @@ script:
 - ./pharo Pharo.image test "$PROJECT.*"
 after_success:
 - ./pharo Pharo.image config $REPO ConfigurationOfWebDoc --install=stable
-- ./pharo Pharo.image webdoc --export=$VERSION "$PROJECT.*"
+- ./pharo Pharo.image webdoc --export=$VERSION "^$PROJECT.*"
 - .travis/update-gh-pages.sh
