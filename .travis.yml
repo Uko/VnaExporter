@@ -1,21 +1,22 @@
 language: pharo
-
 env:
   global:
-    - PROJECT=VnaExporter
-    - REPO=http://www.smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main
-    - PHARO=30
+  - PROJECT=VnaExporter
+  - REPO=http://www.smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main
+  - PHARO=30
+  - secure: AEoBVv/9+ltJAAX1oBECM/q8nzkZhZS1pQZzIN4jAID+FfjuM9fgBVDhuc+UtCB+LTy7bceX8EGa06OGbP+NsyJgKdmgiQ9QVx8fnpSkN0srXawmRBcH2e2IHv4hupincU4wlKOy0kYRN0t1u9Hfn528VT8d4RVafLwBtvI3fLc=
   matrix:
-    - VERSION=stable
-    - VERSION=development
-
+  - VERSION=stable
+  - VERSION=development
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install libc6:i386 libssl1.0.0:i386
-  - wget --quiet -O - get.pharo.org/$PHARO+vm | bash
-
+- sudo apt-get update
+- sudo apt-get install libc6:i386 libssl1.0.0:i386
+- wget --quiet -O - get.pharo.org/$PHARO+vm | bash
 install:
-  - ./pharo Pharo.image config $REPO ConfigurationOf$PROJECT --install=$VERSION
-
+- ./pharo Pharo.image config $REPO ConfigurationOf$PROJECT --install=$VERSION
 script:
-  - ./pharo Pharo.image test "$PROJECT.*"
+- ./pharo Pharo.image test "$PROJECT.*"
+after_success:
+- ./pharo Pharo.image config $REPO ConfigurationOfWebDoc --install=stable
+- ./pharo Pharo.image webdoc --export=$VERSION "$PROJECT.*"
+- .travis/update-gh-pages.sh
