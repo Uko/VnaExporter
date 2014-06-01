@@ -3,11 +3,12 @@ env:
   global:
   - PROJECT=VnaExporter
   - REPO=http://www.smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main
-  - PHARO=30
   - secure: AEoBVv/9+ltJAAX1oBECM/q8nzkZhZS1pQZzIN4jAID+FfjuM9fgBVDhuc+UtCB+LTy7bceX8EGa06OGbP+NsyJgKdmgiQ9QVx8fnpSkN0srXawmRBcH2e2IHv4hupincU4wlKOy0kYRN0t1u9Hfn528VT8d4RVafLwBtvI3fLc=
   matrix:
-  - VERSION=stable
-  - VERSION=development
+  - VERSION=stable PHARO=30
+  - VERSION=stable PHARO=40
+  - VERSION=development PHARO=30
+  - VERSION=development PHARO=40
 before_install:
 - sudo apt-get update
 - sudo apt-get install libc6:i386 libssl1.0.0:i386
